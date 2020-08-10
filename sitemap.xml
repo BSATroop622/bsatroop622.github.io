@@ -29,4 +29,5 @@
 <url> <loc>https://gatsby-markdown-blog-starter.netlify.com/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://gatsby-markdown-blog-starter.netlify.com/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://gatsby-markdown-blog-starter.netlify.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://gatsby-markdown-blog-starter.netlify.com/pook/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
