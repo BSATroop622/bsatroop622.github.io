@@ -5,25 +5,29 @@ import Layout from '../layout'
 import PostListing from '../components/PostListing'
 import config from '../../data/SiteConfig'
 
-const TagTemplate = ({ data, pageContext }) => (
+const CategoryTemplate = ({ data, pageContext }) => (
   <Layout>
     <main>
-      <Helmet
-        title={`Posts tagged as "${pageContext.tag}" | ${config.siteTitle}`}
-      />
+      <Helmet title={` "${pageContext.category}" - ${config.siteTitle}`} />
+      <h1>
+Category:
+{' '}
+{pageContext.category}
+</h1>
       <PostListing postEdges={data.allMarkdownRemark.edges} />
     </main>
   </Layout>
 )
-export default TagTemplate
+
+export default CategoryTemplate
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query TagPage($tag: String) {
+  query CategoryPage($category: String) {
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { categories: { in: [$category] } } }
     ) {
       totalCount
       edges {

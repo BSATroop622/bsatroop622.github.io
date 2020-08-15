@@ -1,110 +1,144 @@
-# Gatsby Starter Ghost
 
-A starter template to build lightning fast websites with [Ghost](https://ghost.org) & [Gatsby](https://gatsbyjs.org)
+<div align="center">
+    <img src="static/logos/logo-1024.png" alt="Logo" width='200px' height='200px'/>
+</div>
 
-**Demo:** https://gatsby.ghost.org
+# Gatsby Markdown Blog Starter
 
-&nbsp;
+A markdown blog starter with all you need features to start markdown blog.
+NOTE: this porject is a developed version of [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter).
 
-![gatsby-starter-ghost](https://user-images.githubusercontent.com/120485/50913567-8ab8e380-142c-11e9-9e78-de02ded12fc6.jpg)
+It aims to provide a minimal base for building advanced GatsbyJS powered Markdown blogs.
 
-&nbsp;
+It has a basic desgin using typography-theme-stow-lake theme.
 
 
-# Installing
+## How can I use this?
 
-```bash
-# With Gatsby CLI
-gatsby new gatsby-starter-ghost https://github.com/TryGhost/gatsby-starter-ghost.git
+If you are a newcomer to Gatsby who's interested in the implementations of most needed features, this is a great place to start.
+
+If you are interested in a foundation for building ultra-fast websites, you can use this project as a "minimal" starter.
+
+[Demo website.](https://gatsby-markdown-blog-starter.netlify.com)
+
+## Features
+
+- Gatsby v2 support
+- Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
+- Separate components for everything
+- High configurability:
+  - Bio section
+  - User social profiles
+  - Copyright information
+  - More!
+- Bio section
+  - Name
+  - Location
+  - Description
+  - Links
+  - Follow Me button
+- Posts in Markdown
+  - Code syntax highlighting
+  - Embed YouTube videos
+  - Embed Tweets
+- Typography
+- Prism syntax highlighter
+- Tags
+  - Separate page for posts under each tag
+- Categories
+  - Separate page for posts under each category
+- Google Analytics support
+- NPM scripts for GitHub Pages deployment
+- Htaccess ready deployment to apache server
+- Social features
+  - Twitter tweet button
+  - Facebook share/share count
+  - Reddit share/share count
+  - Google+ share button
+  - LinkedIn share button
+  - Telegram share button
+- SEO
+  - Sitemap generation
+  - robots.txt
+  - General description tags
+  - Schema.org JSONLD (Google Rich Snippets)
+  - OpenGraph Tags (Facebook/Google+/Pinterest)
+  - Twitter Tags (Twitter Cards)
+- RSS feeds
+- Loading progress for slow networks
+- Web App Manifest support (PWA)
+- Offline support
+- `/static/` and content folders are available to use with `gatsby-image` out of the box
+- Netlify deploy configuration
+- CSS Modules / sass support
+- Development tools
+  - ESLint for linting
+  - Prettier for code style
+  - Remark-Lint for linting Markdown
+  - write-good for linting English prose
+  - gh-pages for deploying to GitHub pages
+  - CodeClimate configuration file and badge
+
+## Getting Started
+
+Install this starter (assuming [Gatsby](https://github.com/gatsbyjs/gatsby/) is installed and updated) by running from your CLI:
+
+```sh
+gatsby new YourProjectName https://github.com/ammarjabakji/gatsby-markdown-blog-starter/
+npm run develop # or gatsby develop
 ```
 
-```bash
-# From Source
-git clone https://github.com/TryGhost/gatsby-starter-ghost.git
-cd gatsby-starter-ghost
+Or you can fork the project, make your changes there and merge new features when needed.
+
+Alternatively:
+
+```sh
+git clone https://github.com/ammarjabakji/gatsby-markdown-blog-starter/ YourProjectName # Clone the project
+cd YourProjectname
+rm -rf .git # So you can have your own changes stored in VCS.
+npm install # or yarn install
+npm run develop # or gatsby develop
 ```
 
-Then install dependencies
+## Configuration
 
-```bash
-yarn
+Edit the export object in `data/SiteConfig`:
+
+```js
+module.exports = {
+  siteTitle: "Gatsby Markdown Blog Starter", // Site title.
+  siteTitleShort: "GA Markdown Blog Starter", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitleAlt: "Gatsby Markdown Blog Starter", // Alternative site title for SEO.
+  siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
+  siteUrl: "https://gatsby-markdown-blog-starter.netlify.com", // Domain of your website without pathPrefix.
+  pathPrefix: "/gatsby-markdown-blog-starter", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  siteDescription: "A GatsbyJS stater with Advanced design in mind.", // Website description used for RSS feeds/meta description tag.
+  siteRss: "/rss.xml", // Path to the RSS file.
+  siteFBAppID: "189387411558234", // FB Application ID for using app insights
+  googleAnalyticsID: "UA-4633244-5", // GA tracking ID.
+  disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
+  dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
+  dateFormat: "DD/MM/YYYY", // Date format for display.
+  userName: "Advanced User", // Username to display in the Bio section.
+  userTwitter: "", // Optionally renders "Follow Me" in the Bio segment.
+  userGitHub:  "", // Add Github link to the footer section.
+  userLocation: "North Pole, Earth", // User location to display in the Bio section.
+  userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the Bio section.
+  userDescription:
+    "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the Bio section.
+  copyright: "Copyright © 2019. Advanced User", // Copyright string for the footer of the website and RSS feed.
+  themeColor: "#c62828", // Used for setting manifest and progress theme colors.
+  backgroundColor: "#e0e0e0" // Used for setting manifest background color.
+};
 ```
 
-&nbsp;
+You can also optionally set `pathPrefix`:
 
-# Running
-
-Start the development server. You now have a Gatsby site pulling content from headless Ghost.
-
-```bash
-gatsby develop
+```js
+module.exports = {
+  // Note: it must *not* have a trailing slash.
+  pathPrefix: "/gatsby-markdown-blog-starter" // Prefixes all links. For cases when deployed to example.github.io/gatsby-markdown-blog-starter/.
+};
 ```
 
-By default, the starter will populate content from a default Ghost install located at https://gatsby.ghost.io.
-
-To use your own install, you will need to edit the `.ghost.json` config file with your credentials. Change the `apiUrl` value to the URL of your Ghost site. For Ghost(Pro) customers, this is the Ghost URL ending in `.ghost.io`, and for people using the self-hosted version of Ghost, it's the same URL used to access your site.
-
-Next, update the `contentApiKey` value to a key associated with the Ghost site. A key can be provided by creating an integration within Ghost Admin. Navigate to Integrations and click "Add new integration". Name the integration appropriately and click create.
-
-Finally, configure your desired URL in `siteConfig.js`, so links (e. g. canonical links) are generated correctly. You can also update other default values, such as `postsPerPage` in this file.
-
-To use this starter without issues, your Ghost installation needs to be at least on version `2.10.0`.
-
-The default Ghost version that is used for this starter is `3.x`. If your Ghost installation is on a lower version, you will need to pass in a `version` property in your `.ghost.json` settings:
-
-**Ghost >=2.10.0 <3.0.0**
-```json
-{
-    "apiUrl": "https://gatsby.ghost.io",
-    "contentApiKey": "9cc5c67c358edfdd81455149d0",
-    "version": "v2"
-}
-```
-
-**Ghost <=3.0.0**
-```json
-{
-    "apiUrl": "https://gatsby.ghost.io",
-    "contentApiKey": "9cc5c67c358edfdd81455149d0"
-}
-```
-
-&nbsp;
-
-# Deploying with Netlify
-
-The starter contains three config files specifically for deploying with Netlify. A `netlify.toml` file for build settings, a `/static/_headers` file with default security headers set for all routes, and `/static/_redirects` to set Netlify custom domain redirects.
-
-To deploy to your Netlify account, hit the button below.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/TryGhost/gatsby-starter-ghost)
-
-Content API Keys are generally not considered to be sensitive information, they exist so that they can be changed in the event of abuse; so most people commit it directly to their `.ghost.json` config file. If you prefer to keep this information out of your repository you can remove this config and set [Netlify ENV variables](https://www.netlify.com/docs/continuous-deployment/#build-environment-variables) for production builds instead.
-
-Once deployed, you can set up a [Ghost + Netlify Integration](https://docs.ghost.org/integrations/netlify/) to use deploy hooks from Ghost to trigger Netlify rebuilds. That way, any time data changes in Ghost, your site will rebuild on Netlify.
-
-&nbsp;
-
-# Optimising
-
-You can disable the default Ghost Handlebars Theme front-end by enabling the `Make this site private` flag within your Ghost settings. This enables password protection in front of the Ghost install and sets `<meta name="robots" content="noindex" />` so your Gatsby front-end becomes the source of truth for SEO.
-
-&nbsp;
-
-# Extra options
-
-```bash
-# Run a production build, locally
-gatsby build
-
-# Serve a production build, locally
-gatsby serve
-```
-
-Gatsby `develop` uses the `development` config in `.ghost.json` - while Gatsby `build` uses the `production` config.
-
-&nbsp;
-
-# Copyright & License
-
-Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE).
+WARNING: Make sure to edit `static/robots.txt` to include your domain for the sitemap!
