@@ -1,5 +1,8 @@
 [build]
-  publish = "public"
-  command = "yarn run build"
-[build.environment]
-  YARN_VERSION = "1.7.0"
+ command = "gatsby build"
+ publish = "public"
+[dev]
+ command = "gatsby develop"
+[[headers]]
+ for = "/*"
+ Basic-Auth: bsatroop:troop622
