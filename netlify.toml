@@ -5,4 +5,5 @@
  command = "gatsby develop"
 [[headers]]
  for = "/*"
- Basic-Auth: bsatroop:troop622
+ [headers.values]
+ Basic-Auth = "bsatroop:troop622"
