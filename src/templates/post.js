@@ -36,9 +36,9 @@ export default ({ data, pageContext }) => {
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
 
           <hr />
-          <Bio config={config} />
+          
           <div className={styles.postMeta}>
-            <SocialLinks postPath={slug} postNode={postNode} />
+            
           </div>
         </div>
         <nav>
