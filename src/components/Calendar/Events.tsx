@@ -39,8 +39,9 @@ const Events = ({ events, hasPast }: Props) => {
               a11yTitle="Event name"
             >
               {event.eventName}
-              {event.place}
             </Text>
+            <br/>
+            <Text>{event.place}</Text>
           </Box>
         </Box>
       ))}
