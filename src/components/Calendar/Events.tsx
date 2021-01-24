@@ -33,13 +33,13 @@ const Events = ({ events, hasPast }: Props) => {
           >
             <Text
               size="small"
-              truncate
               color={
                 hasPast ? 'calendar-past-event-text' : 'calendar-event-text'
               }
               a11yTitle="Event name"
             >
               {event.eventName}
+              {event.place}
             </Text>
           </Box>
         </Box>
