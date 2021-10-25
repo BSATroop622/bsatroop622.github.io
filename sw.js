@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-9a37ea6251a24f7b1987.js"
+    "url": "webpack-runtime-288606c2bee52c7fb7b7.js"
   },
   {
     "url": "framework-efd1c5c3af7258af61ab.js"
@@ -37,16 +37,16 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "44a5b4272bcbe1eeb1116b9494f9ab32"
+    "revision": "83576dbafab8fc3f29dbad9cf26c93b3"
   },
   {
-    "url": "static/webfonts/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_cJD3gnD_g.woff2"
+    "url": "static/webfonts/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_cJD3gnD_g.woff2"
   },
   {
-    "url": "static/webfonts/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
+    "url": "static/webfonts/s/montserrat/v18/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2"
   },
   {
-    "url": "static/webfonts/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2"
+    "url": "static/webfonts/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-1af2b3b136460c4ee92c.js"
